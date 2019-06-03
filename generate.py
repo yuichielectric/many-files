@@ -7,7 +7,7 @@ import string
 for i in range(1, 11):
     for j in range(1, 11):
         path = '%d/%d' % (i, j)
-        os.makedirs(path)
+        os.makedirs(path, exist_ok=True)
         for k in range(1, 101):
             file_path = path + ('/%d' % k)
             with open(file_path, 'w') as f:
